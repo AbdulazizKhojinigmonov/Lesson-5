@@ -1,0 +1,11 @@
+.calc, .courseSale, .registration {
+background-color: aqua;
+padding: 20px 30px;
+width: 500px;
+margin: 30px auto 50px ;
+}
+#procent {
+    display: flex;
+}
+
+

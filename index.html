@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example#1</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="calc">
+        <h1> Calculator:</h1>
+        <label id="a" for="">
+            a=
+            <input id="inputA" type="number">
+        </label><br>
+        <label id="b" for="">
+            b=
+            <input id="inputB" type="number">
+        </label><br>
+        <button id="calculateButton" onclick="calc()"> Calculate :</button>
+        <p id="result"></p>
+    </div>
+
+
+
+    <div class="courseSale">
+        <h2> Calculator cost of study</h2>
+        <label id="procent" for="">
+            Course
+            <select name="" id="courseName" oninput="courseSale()">
+                <option value="none">choose</option>
+                <option value="py">python</option>
+                <option value="fr">Frontend</option>
+                <option value="ux">UX/UI</option>
+            </select>
+            <label for="">
+                Sale
+                <input type="range" id="discountRange" min="0" max="50" step="5" value="0" oninput="courseSale()">
+                <span id="discountValue">0%</span>
+            </label>
+            <label for="">
+                summa:
+                <input type="text" id="sale" readonly>
+            </label>
+
+        </label>
+
+    </div>
+
+
+    <div class="registration">
+        <h2>Take appoint</h2>
+        <label for="">
+            name:
+            <select name="" id="country">
+                <option value="none">choose </option>
+                <option value="uz">Uzbekistan</option>
+                <option value="kz">Kazakistan</option>
+                <option value="us">America</option>
+            </select>
+        </label>
+        <label for="">
+            telephone:
+            <input type="tel" id="phone">
+        </label>
+        <label for="">
+            <input id="check" type="checkbox" required>
+            Verify
+        </label>
+
+        <button id="button" disabled> Sent</button>
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
