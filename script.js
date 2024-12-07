@@ -39,37 +39,37 @@ function calc() {
 }
 
 
-const country = document.getElementById("country")
+let country = document.getElementById("country")
 country.addEventListener("input", registration)
 let phone = document.getElementById("phone")
 let countryValue = country.value
 
 function registration() {
 
-    if (countryValue == "none") {
-        phone.value = "choose again"
-    } else if (countryValue == 'uz') {
-        phone.value= "+998"
-    } else if (countryValue == 'kz') {
-        phone.value = "+7";
+    if (countryValue == "uz") {
+        phone.value = "+998"
+    } else if (countryValue == "kz") {
+        phone.value= "+7"
+    } else if (countryValue == "us") {
+        phone.value = "+1";
     } else {
-        phone.value = "+1"
+        phone.value = "choose again";
     }
     
 
 
-}
+} 
 
 let checkbox = document.getElementById("check");
-checkbox.addEventListener("input", activeButton);
+checkbox.addEventListener("input", activeBtn);
 
-function activeButton() {
+function activeBtn() {
     let checkboxValue = checkbox.checked;
-    let button = document.getElementById("button");
+    let btn = document.getElementById("btn");
     if (checkboxValue) {
-        button.disable = false
+        btn.disable = false
     } else {
-        button.disable = true
+        btn.disable = true
     }
 }
 
