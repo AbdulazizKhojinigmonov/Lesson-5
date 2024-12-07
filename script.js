@@ -72,3 +72,4 @@ function activeButton() {
         button.disable = true
     }
 }
+
