@@ -13,16 +13,16 @@ function courseSale() {
     } else if (courseName == "ux") {
         price = UX_UI;
     } else {
-        price = " cho nado"
+        price = 0; // Invalid course, set to 0
     }
 
-    const discountRange = document.getElementById("discountRange").value
+    const discountRange = document.getElementById("discountRange").value;
     const discountValue = document.getElementById("discountValue");
     discountValue.innerHTML = discountRange + '%';
 
     const sum = price / 100 * (100 - discountRange);
     const resulValue = document.getElementById("sale");
-    resulValue.value = sum
+    resulValue.value = sum;
     console.log(sum);
 }
 
@@ -39,37 +39,40 @@ function calc() {
 }
 
 
-let country = document.getElementById("country")
-country.addEventListener("input", registration)
-let phone = document.getElementById("phone")
-let countryValue = country.value
 
-function registration() {
+
+
+function telephone() {
+    let country = document.getElementById("country");
+    let phone = document.getElementById("phone");
+    let countryValue = country.value;
 
     if (countryValue == "uz") {
-        phone.value = "+998"
+        phone.value = "+998";
     } else if (countryValue == "kz") {
-        phone.value= "+7"
+        phone.value = "+7";
     } else if (countryValue == "us") {
         phone.value = "+1";
-    } else {
-        phone.value = "choose again";
-    }
-    
-
-
-} 
-
-let checkbox = document.getElementById("check");
-checkbox.addEventListener("input", activeBtn);
-
-function activeBtn() {
-    let checkboxValue = checkbox.checked;
-    let btn = document.getElementById("btn");
-    if (checkboxValue) {
-        btn.disable = false
-    } else {
-        btn.disable = true
     }
 }
+
+document.getElementById("country").addEventListener("input", telephone);
+
+function Send() {
+    // Function for name input, currently does nothing
+}
+
+function send() {
+    let checkbox = document.getElementById("check");
+    let checkboxValue = checkbox.checked;
+    let btn = document.getElementById("buttonSend");
+
+    if (checkboxValue) {
+        btn.disabled = false;
+    } else {
+        btn.disabled = true;
+    }
+}
+
+document.getElementById("check").addEventListener("click", send);
 

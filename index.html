@@ -39,11 +39,11 @@
                 Sale
                 <input type="range" id="discountRange" min="0" max="50" step="5" value="0" oninput="courseSale()">
                 <span id="discountValue">0%</span>
-            </label>
+            </label><br>
             <label for="">
                 summa:
                 <input type="text" id="sale" readonly>
-            </label>
+            </label><br>
 
         </label>
 
@@ -52,9 +52,14 @@
 
     <div class="registration">
         <h2>Take appoint</h2>
+        <form action="">
         <label for="">
             name:
-            <select name="" id="country">
+            <input type="text" name="" id="name" oninput="Send()" required>
+        </label>
+        <label for="">
+            Country:
+            <select name="" id="country" oninput="telephone()" required>
                 <option value="choose">choose </option>
                 <option value="uz">Uzbekistan</option>
                 <option value="kz">Kazakistan</option>
@@ -67,12 +72,12 @@
             <input type="tel" id="phone">
         </label>
         <label for="">
-            <input id="check" type="checkbox" name="checkbox">
+            <input id="check" type="checkbox" onclick="send()" required>
             Verify
         </label>
-
-        <button id="btn" disabled> Sent</button>
-<button></button>
+        <input type="submit" id="buttonSend" disabled oninput="send()" value="отправить">
+        <button  id="btn" disabled> Sent</button
+        </form>
     </div>
     <script src="./script.js"></script>
 </body>

@@ -1,8 +1,16 @@
-.calc, .courseSale, .registration {
+.calc,.courseSale, .registration {
 background-color: aqua;
 padding: 20px 30px;
 width: 500px;
 margin: 30px auto 50px ;
+line-height: 15px;
+}
+label{
+    display: block;
+}
+input[type="checkbox"]{
+    display: inline;
+
 }
 #procent {
     display: flex;
